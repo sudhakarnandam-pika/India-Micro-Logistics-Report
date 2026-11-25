@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>India Micro-Logistics & Last-Mile Vehicle Market Report (2026–2035)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #0F172A; }
+    .tab-active { border-bottom: 3px solid #0D9488; color: #0F172A; font-weight: 700; }
+    .card { background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 0.75rem; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  </style>
+</head>
+<body class="antialiased">
+  <!-- Header -->
+  <header class="bg-slate-900 text-white border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/20 text-teal-300 text-xs font-semibold tracking-wide uppercase mb-3">
+            Market Intelligence &bull; FY26–FY35 Outlook
+          </div>
+          <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight">India Micro-Logistics &amp; Last-Mile Vehicle Report</h1>
+          <p class="text-slate-300 mt-2 max-w-3xl text-sm sm:text-base">
+            Comprehensive analysis of sub-2T SCVs, L3/L5 three-wheelers, and commercial two-wheelers across OEM volumes, powertrain mix (EV/CNG/ICE), regulated vs. unregulated segments, INR revenue pools, 2035 projections, and state-level demand.
+          </p>
+        </div>
+        <div class="bg-slate-800/80 border border-slate-700 rounded-xl p-4 text-right shrink-0">
+          <div class="text-xs text-slate-400 uppercase font-semibold">FY26 Ecosystem TAM</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-teal-400 mt-0.5">&#8377;1,28,500 Cr</div>
+          <div class="text-xs text-slate-300 mt-1">Projected &#8377;3,89,000 Cr by FY35</div>
+        </div>
+      </div>
+
+      <!-- KPI Strip -->
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
+        <div class="bg-slate-800/70 border border-slate-700/80 rounded-lg p-4">
+          <div class="text-xs text-slate-400 font-medium">Organized Volume (FY26)</div>
+          <div class="text-xl sm:text-2xl font-bold text-white mt-1">1.92M Units</div>
+          <div class="text-xs text-emerald-400 mt-1">1.36M 3W &bull; 0.34M SCV &bull; 0.22M 2W</div>
+        </div>
+        <div class="bg-slate-800/70 border border-slate-700/80 rounded-lg p-4">
+          <div class="text-xs text-slate-400 font-medium">Unregulated Fleet (FY26)</div>
+          <div class="text-xl sm:text-2xl font-bold text-amber-400 mt-1">0.555M Units</div>
+          <div class="text-xs text-slate-300 mt-1">23.1% physical share (-2.9% CAGR)</div>
+        </div>
+        <div class="bg-slate-800/70 border border-slate-700/80 rounded-lg p-4">
+          <div class="text-xs text-slate-400 font-medium">Regulated EV Penetration</div>
+          <div class="text-xl sm:text-2xl font-bold text-teal-400 mt-1">49.6%</div>
+          <div class="text-xs text-slate-300 mt-1">8,46,390 EVs (3W + SCV) in FY26</div>
+        </div>
+        <div class="bg-slate-800/70 border border-slate-700/80 rounded-lg p-4">
+          <div class="text-xs text-slate-400 font-medium">FY35 Regulated Volume</div>
+          <div class="text-xl sm:text-2xl font-bold text-white mt-1">3.74M Units</div>
+          <div class="text-xs text-emerald-400 mt-1">+8.1% CAGR (78.5% EV share)</div>
+        </div>
+        <div class="bg-slate-800/70 border border-slate-700/80 rounded-lg p-4 col-span-2 lg:col-span-1">
+          <div class="text-xs text-slate-400 font-medium">Top 10 States Share</div>
+          <div class="text-xl sm:text-2xl font-bold text-sky-400 mt-1">85.5%</div>
+          <div class="text-xs text-slate-300 mt-1">UP (18.5%), MH (14.2%), KA (11.8%)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="bg-white text-slate-700 border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto space-x-6 text-sm font-medium">
+        <a href="#revenue" class="py-3.5 whitespace-nowrap hover:text-teal-600">1. Revenue &amp; Energy Mix</a>
+        <a href="#vehicles" class="py-3.5 whitespace-nowrap hover:text-teal-600">2. Vehicles &amp; TCO Calculator</a>
+        <a href="#regulatory" class="py-3.5 whitespace-nowrap hover:text-teal-600">3. Regulated vs. Unregulated</a>
+        <a href="#oems" class="py-3.5 whitespace-nowrap hover:text-teal-600">4. OEMs &amp; Fleet Operators</a>
+        <a href="#forecast" class="py-3.5 whitespace-nowrap hover:text-teal-600">5. 2035 Projections</a>
+        <a href="#states" class="py-3.5 whitespace-nowrap hover:text-teal-600">6. State-Wise Demand</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- Section 1: Revenue Streams & Energy Mix -->
+    <section id="revenue" class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">1. FY26 Revenue Streams (INR) &amp; Powertrain Breakdown</h2>
+        <p class="text-slate-600 text-sm mt-1">Monetization across the &#8377;1,28,500 Crore micro-logistics value chain and energy split across 17.05 lakh regulated 3Ws and sub-2T SCVs.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-slate-800">Ecosystem Revenue Streams (&#8377;1,28,500 Cr)</h3>
+            <span class="text-xs font-semibold bg-teal-50 text-teal-700 px-2.5 py-1 rounded-md">FY26 Actuals</span>
+          </div>
+          <div class="h-72">
+            <canvas id="revenueChart"></canvas>
+          </div>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-xs text-slate-600 border-t pt-3">
+            <div><span class="font-semibold text-slate-800">Hyperlocal Drop:</span> &#8377;18–&#8377;28 / order</div>
+            <div><span class="font-semibold text-slate-800">SCV Intra-City Trip:</span> &#8377;650–&#8377;1,400</div>
+            <div><span class="font-semibold text-slate-800">FaaS e-2W Lease:</span> &#8377;1,100–&#8377;1,600 / wk</div>
+            <div><span class="font-semibold text-slate-800">Battery Swap:</span> &#8377;55–&#8377;75 (2W) | &#8377;180–&#8377;240 (3W)</div>
+          </div>
+        </div>
+
+        <div class="card p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-bold text-slate-800">Regulated Volume by Energy Source (17.05L Units)</h3>
+            <span class="text-xs font-semibold bg-sky-50 text-sky-700 px-2.5 py-1 rounded-md">3W + Sub-2T SCV</span>
+          </div>
+          <div class="h-72">
+            <canvas id="energyChart"></canvas>
+          </div>
+          <div class="mt-4 grid grid-cols-4 gap-2 text-center text-xs border-t pt-3">
+            <div class="p-2 bg-teal-50 rounded">
+              <div class="font-bold text-teal-800">49.6%</div>
+              <div class="text-slate-600">EV (8.46L)</div>
+            </div>
+            <div class="p-2 bg-sky-50 rounded">
+              <div class="font-bold text-sky-800">31.4%</div>
+              <div class="text-slate-600">CNG (5.35L)</div>
+            </div>
+            <div class="p-2 bg-amber-50 rounded">
+              <div class="font-bold text-amber-800">16.5%</div>
+              <div class="text-slate-600">Diesel (2.81L)</div>
+            </div>
+            <div class="p-2 bg-slate-100 rounded">
+              <div class="font-bold text-slate-800">2.5%</div>
+              <div class="text-slate-600">Petrol (0.43L)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Vehicle Categories & Interactive TCO Simulator -->
+    <section id="vehicles" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">2. Vehicle Categories, Capex &amp; Running Cost Simulator</h2>
+          <p class="text-slate-600 text-sm mt-1">Ex-showroom pricing (INR) across CMVR classes and interactive monthly energy cost comparison.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <label for="catFilter" class="text-xs font-semibold text-slate-600">Filter Class:</label>
+          <select id="catFilter" class="text-sm border border-slate-300 rounded-lg px-3 py-1.5 bg-white">
+            <option value="ALL">All Categories (8)</option>
+            <option value="2W">Two-Wheelers (2W)</option>
+            <option value="3W">Three-Wheelers (L3 / L5)</option>
+            <option value="SCV">Mini-Trucks / SCVs (N1)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Interactive Daily KM TCO Estimator -->
+      <div class="card p-6 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-lg font-bold text-teal-300">Interactive Monthly Energy Cost &amp; EV Savings Estimator</h3>
+            <p class="text-xs text-slate-300">Adjust daily commercial utilization (26 working days/month) to compare fuel/electricity expenditure.</p>
+          </div>
+          <div class="flex items-center gap-4 bg-slate-950/60 px-4 py-2.5 rounded-lg border border-slate-700">
+            <span class="text-xs text-slate-400">Daily Run:</span>
+            <input type="range" id="kmSlider" min="40" max="160" step="10" value="100" class="accent-teal-400 cursor-pointer" />
+            <span id="kmValue" class="text-base font-extrabold text-teal-400 w-20 text-right">100 km/d</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-slate-800/90 border border-slate-700 rounded-lg p-4">
+            <div class="text-xs text-slate-400 font-semibold uppercase">Commercial 2W (150 kg)</div>
+            <div class="mt-2 flex justify-between"><span>ICE Moped (&#8377;1.85/km):</span><span id="ice2w" class="font-bold text-rose-300">&#8377;4,810/mo</span></div>
+            <div class="mt-1 flex justify-between"><span>Electric 2W (&#8377;0.35/km):</span><span id="ev2w" class="font-bold text-teal-300">&#8377;910/mo</span></div>
+            <div class="mt-2 pt-2 border-t border-slate-700 flex justify-between text-xs"><span class="text-emerald-400 font-semibold">Monthly EV Savings:</span><span id="save2w" class="font-extrabold text-emerald-400">&#8377;3,900</span></div>
+          </div>
+          <div class="bg-slate-800/90 border border-slate-700 rounded-lg p-4">
+            <div class="text-xs text-slate-400 font-semibold uppercase">L5 Cargo 3W (500–750 kg)</div>
+            <div class="mt-2 flex justify-between"><span>Diesel / CNG (&#8377;3.00/km avg):</span><span id="ice3w" class="font-bold text-rose-300">&#8377;7,800/mo</span></div>
+            <div class="mt-1 flex justify-between"><span>L5 Electric (&#8377;0.85/km):</span><span id="ev3w" class="font-bold text-teal-300">&#8377;2,210/mo</span></div>
+            <div class="mt-2 pt-2 border-t border-slate-700 flex justify-between text-xs"><span class="text-emerald-400 font-semibold">Monthly EV Savings:</span><span id="save3w" class="font-extrabold text-emerald-400">&#8377;5,590</span></div>
+          </div>
+          <div class="bg-slate-800/90 border border-slate-700 rounded-lg p-4">
+            <div class="text-xs text-slate-400 font-semibold uppercase">Sub-2T SCV Mini-Truck (850 kg)</div>
+            <div class="mt-2 flex justify-between"><span>Diesel SCV (&#8377;4.65/km):</span><span id="icescv" class="font-bold text-rose-300">&#8377;12,090/mo</span></div>
+            <div class="mt-1 flex justify-between"><span>Electric SCV (&#8377;1.12/km):</span><span id="evscv" class="font-bold text-teal-300">&#8377;2,912/mo</span></div>
+            <div class="mt-2 pt-2 border-t border-slate-700 flex justify-between text-xs"><span class="text-emerald-400 font-semibold">Monthly EV Savings:</span><span id="savescv" class="font-extrabold text-emerald-400">&#8377;9,178</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vehicle Table -->
+      <div class="card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-100 text-slate-700 border-b border-slate-200 text-xs uppercase">
+                <th class="py-3.5 px-4 font-bold">Vehicle Category</th>
+                <th class="py-3.5 px-4 font-bold">CMVR Class</th>
+                <th class="py-3.5 px-4 font-bold">Payload</th>
+                <th class="py-3.5 px-4 font-bold">Top Speed</th>
+                <th class="py-3.5 px-4 font-bold">Representative Models</th>
+                <th class="py-3.5 px-4 font-bold">Ex-Showroom</th>
+                <th class="py-3.5 px-4 font-bold">Running Cost</th>
+              </tr>
+            </thead>
+            <tbody id="vehicleTableBody" class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Regulated vs Unregulated -->
+    <section id="regulatory" class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">3. Regulated (CMVR / VAHAN) vs. Unregulated Vehicles</h2>
+        <p class="text-slate-600 text-sm mt-1">Structural split between homologated VAHAN-registered commercial vehicles and exempt/unorganized low-speed fleets.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card p-6 border-t-4 border-t-teal-600">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-teal-700">CMVR Homologated</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-1">Regulated Fleet (76.9% Volume)</h3>
+            </div>
+            <span class="bg-teal-100 text-teal-800 text-xs font-bold px-2.5 py-1 rounded-full">+11.4% CAGR</span>
+          </div>
+          <div class="grid grid-cols-2 gap-4 my-5 bg-slate-50 p-4 rounded-lg">
+            <div>
+              <div class="text-xs text-slate-500">FY26 Sales Volume</div>
+              <div class="text-xl font-extrabold text-slate-900">18.45 Lakh</div>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Total Capex Value</div>
+              <div class="text-xl font-extrabold text-teal-700">&#8377;71,030 Cr</div>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Avg. Ex-Showroom</div>
+              <div class="text-base font-bold text-slate-800">&#8377;3.85 Lakh</div>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Compliance Overhead</div>
+              <div class="text-base font-bold text-slate-800">&#8377;18k–45k / yr</div>
+            </div>
+          </div>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li>&bull; <strong>Includes:</strong> High-speed 2Ws, Registered L3/L5 3Ws (ICE/CNG/EV), Sub-2T SCV Mini-Trucks.</li>
+            <li>&bull; <strong>Safety &amp; Battery:</strong> Mandatory AIS-156 Phase 2 certified LFP/NMC packs, telematics, RTO permits, and commercial insurance.</li>
+          </ul>
+        </div>
+
+        <div class="card p-6 border-t-4 border-t-amber-500">
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Exempt &amp; Unorganized</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-1">Unregulated Fleet (23.1% Volume)</h3>
+            </div>
+            <span class="bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded-full">-2.9% CAGR</span>
+          </div>
+          <div class="grid grid-cols-2 gap-4 my-5 bg-slate-50 p-4 rounded-lg">
+            <div>
+              <div class="text-xs text-slate-500">FY26 Sales Volume</div>
+              <div class="text-xl font-extrabold text-slate-900">5.55 Lakh</div>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Total Capex Value</div>
+              <div class="text-xl font-extrabold text-amber-700">&#8377;5,270 Cr</div>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Avg. Ex-Showroom</div>
+              <div class="text-base font-bold text-slate-800">&#8377;0.95 Lakh</div>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Compliance Overhead</div>
+              <div class="text-base font-bold text-slate-800">&#8377;0–3k / yr</div>
+            </div>
+          </div>
+          <ul class="text-xs text-slate-600 space-y-2">
+            <li>&bull; <strong>Includes:</strong> Low-speed e-2Ws (&lt;250W, &le;25 km/h), unregistered L3 e-rickshaws/carts (~4.75L), and locally fabricated chassis.</li>
+            <li>&bull; <strong>Outlook:</strong> Contracting due to municipal VAHAN enforcement, lead-acid bans, and formal NBFC financing shifts toward L5 EVs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Major Companies -->
+    <section id="oems" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">4. Major OEMs &amp; Fleet-as-a-Service (FaaS) Operators</h2>
+          <p class="text-slate-600 text-sm mt-1">FY26 domestic production/sales volumes, export footprint, and segment revenues in INR.</p>
+        </div>
+        <input type="text" id="oemSearch" placeholder="Search company or model..." class="text-sm border border-slate-300 rounded-lg px-3.5 py-1.5 bg-white w-full sm:w-64" />
+      </div>
+
+      <div class="card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-slate-100 text-slate-700 border-b border-slate-200 text-xs uppercase">
+                <th class="py-3.5 px-4 font-bold">Company</th>
+                <th class="py-3.5 px-4 font-bold">Primary Segment</th>
+                <th class="py-3.5 px-4 font-bold">FY26 Domestic Vol.</th>
+                <th class="py-3.5 px-4 font-bold">FY26 Exports</th>
+                <th class="py-3.5 px-4 font-bold">FY26 Revenue (INR)</th>
+                <th class="py-3.5 px-4 font-bold">Flagship Models &amp; Share</th>
+              </tr>
+            </thead>
+            <tbody id="oemTableBody" class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: 2035 Demand Forecast -->
+    <section id="forecast" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">5. Demand Projection Through 2035 (Volume &amp; EV Transition)</h2>
+          <p class="text-slate-600 text-sm mt-1">Regulated sales projected to double from 1.85M (FY26) to 3.74M units (FY35) at +8.1% CAGR.</p>
+        </div>
+        <div class="inline-flex rounded-lg border border-slate-300 bg-white p-1 text-xs font-semibold">
+          <button id="btnVol" class="px-3 py-1.5 rounded-md bg-slate-900 text-white">Vehicle Volumes</button>
+          <button id="btnEv" class="px-3 py-1.5 rounded-md text-slate-700 hover:bg-slate-100">EV vs ICE/CNG Mix</button>
+        </div>
+      </div>
+
+      <div class="card p-6">
+        <div class="h-80">
+          <canvas id="forecastChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: State-Wise Demand -->
+    <section id="states" class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold text-slate-900">6. State-Wise Demand Distribution (FY26)</h2>
+        <p class="text-slate-600 text-sm mt-1">Top 10 states/UTs generate 85.5% of national volume across two distinct regional archetypes. Click any state to inspect details.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="card p-6 lg:col-span-2">
+          <h3 class="font-bold text-slate-800 mb-4">National Demand Share by State (%)</h3>
+          <div class="h-80">
+            <canvas id="stateChart"></canvas>
+          </div>
+        </div>
+
+        <div id="stateInspector" class="card p-6 bg-slate-900 text-white flex flex-col justify-between">
+          <div>
+            <div class="text-xs uppercase tracking-wider text-teal-400 font-bold">State Demand Inspector</div>
+            <h3 id="stName" class="text-2xl font-extrabold mt-1">Uttar Pradesh (#1)</h3>
+            <div class="mt-4 grid grid-cols-2 gap-3">
+              <div class="bg-slate-800 p-3 rounded-lg">
+                <div class="text-xs text-slate-400">National Share</div>
+                <div id="stShare" class="text-xl font-bold text-teal-400">18.5%</div>
+              </div>
+              <div class="bg-slate-800 p-3 rounded-lg">
+                <div class="text-xs text-slate-400">FY26 Reg. Volume</div>
+                <div id="stVol" class="text-xl font-bold text-white">3,41,400</div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <div class="text-xs text-slate-400 font-semibold uppercase">Dominant Mix</div>
+              <p id="stMix" class="text-sm text-slate-200 mt-1">L3 E-Rickshaws/Carts (51%), L5 EV, CNG SCV</p>
+            </div>
+            <div class="mt-4">
+              <div class="text-xs text-slate-400 font-semibold uppercase">Key Demand Catalysts</div>
+              <p id="stCatalyst" class="text-sm text-slate-300 mt-1">Highest 3W &amp; e-rickshaw base in India (33.9% of national L5 EV passenger sales); Lucknow, Kanpur, Varanasi, Noida hubs.</p>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400">
+            Tip: Click any bar in the state chart to inspect regional powertrain dynamics.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-8 mt-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div>India Micro-Logistics &amp; Last-Mile Vehicle Market Intelligence Report (2026–2035)</div>
+      <div>Data covers CMVR L1/L2, L3, L5N &amp; N1 (&lt;2T GVW) segments in INR (&#8377;).</div>
+    </div>
+  </footer>
+
+  <script>
+    // 1. Revenue Doughnut Chart
+    new Chart(document.getElementById('revenueChart'), {
+      type: 'doughnut',
+      data: {
+        labels: [
+          'Last-Mile Freight & Quick-Commerce (₹54,200 Cr)',
+          'Primary OEM Vehicle Sales (₹48,600 Cr)',
+          'Aftermarket Spares & Tyres (₹11,400 Cr)',
+          'CV Financing & NBFC Interest (₹7,800 Cr)',
+          'Fleet-as-a-Service Leasing (₹3,900 Cr)',
+          'Battery Swapping / EaaS (₹2,600 Cr)'
+        ],
+        datasets: [{
+          data: [54200, 48600, 11400, 7800, 3900, 2600],
+          backgroundColor: ['#0D9488', '#0284C7', '#6366F1', '#F59E0B', '#10B981', '#64748B'],
+          borderWidth: 2,
+          borderColor: '#FFFFFF'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'right', labels: { boxWidth: 12, font: { size: 11 } } } }
+      }
+    });
+
+    // 2. Energy Stacked Bar Chart
+    new Chart(document.getElementById('energyChart'), {
+      type: 'bar',
+      data: {
+        labels: ['Registered 3W (13.63L)', 'Sub-2T SCV Mini-Trucks (3.42L)'],
+        datasets: [
+          { label: 'Electric (EV)', data: [830990, 15400], backgroundColor: '#0D9488' },
+          { label: 'CNG / Bi-Fuel', data: [370710, 164160], backgroundColor: '#0284C7' },
+          { label: 'Diesel', data: [156110, 124830], backgroundColor: '#F59E0B' },
+          { label: 'Petrol / LPG', data: [5602, 37610], backgroundColor: '#94A3B8' }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: { x: { stacked: true }, y: { stacked: true, ticks: { callback: v => (v/100000).toFixed(1) + 'L' } } },
+        plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } } }
+      }
+    });
+
+    // 3. Vehicle Categories Table & Filter
+    const vehicles = [
+      { group: '2W', name: 'Low-Speed Commercial e-2W', cmvr: 'Exempt (<250W)', payload: '80–120 kg', speed: '≤ 25 km/h', models: 'Yulu DeX, Bounce Infinity B2B, e-Sprinto', price: '₹0.55–0.75 L', run: '₹0.25–0.40/km' },
+      { group: '2W', name: 'High-Speed Commercial 2W (EV/ICE)', cmvr: 'L1 / L2', payload: '120–180 kg', speed: '45–75 km/h', models: 'TVS XL100 HD, Hero Nyx HX5, Vida V2 Pro', price: '₹0.48–1.35 L', run: '₹0.35 (EV) / ₹1.85 (ICE)' },
+      { group: '3W', name: 'E-Rickshaw / E-Cart (Low Speed)', cmvr: 'L3', payload: '310–400 kg', speed: '≤ 25 km/h', models: 'YC Electric E-Loader, Saera Mayuri, E-Alfa', price: '₹1.10–1.65 L', run: '₹0.50–0.75/km' },
+      { group: '3W', name: 'Cargo Three-Wheeler (ICE / CNG)', cmvr: 'L5N', payload: '500–750 kg', speed: '50–60 km/h', models: 'Bajaj Maxima C, Piaggio Ape Xtra, Atul Gem', price: '₹2.35–3.25 L', run: '₹2.40 (CNG) / ₹3.60 (Dsl)' },
+      { group: '3W', name: 'Cargo Three-Wheeler (Electric)', cmvr: 'L5N', payload: '500–750 kg', speed: '50–55 km/h', models: 'Mahindra Treo Zor, Euler HiLoad, Bajaj GoGo', price: '₹3.10–4.52 L', run: '₹0.75–0.95/km' },
+      { group: 'SCV', name: 'Mini-Truck / SCV (Petrol / Diesel)', cmvr: 'N1 (<2T)', payload: '750–1,000 kg', speed: '70–80 km/h', models: 'Tata Ace Gold, Mahindra Jeeto, Super Carry', price: '₹3.99–6.69 L', run: '₹4.20–5.10/km' },
+      { group: 'SCV', name: 'Mini-Truck / SCV (CNG / Bi-Fuel)', cmvr: 'N1 (<2T)', payload: '630–900 kg', speed: '70–80 km/h', models: 'Tata Ace CNG 2.0, Super Carry CNG, Jeeto CNG', price: '₹5.00–6.50 L', run: '₹2.90–3.40/km' },
+      { group: 'SCV', name: 'Electric Mini-Truck (e-SCV)', cmvr: 'N1 (<2.5T)', payload: '600–1,000 kg', speed: '60–70 km/h', models: 'Tata Ace EV 1000, Mahindra Zeo, Euler Storm', price: '₹8.50–10.50 L', run: '₹1.00–1.25/km' }
+    ];
+
+    function renderVehicles(filter) {
+      const tbody = document.getElementById('vehicleTableBody');
+      tbody.innerHTML = vehicles
+        .filter(v => filter === 'ALL' || v.group === filter)
+        .map(v => `<tr class="hover:bg-slate-50">
+          <td class="py-3 px-4 font-semibold text-slate-900">${v.name}</td>
+          <td class="py-3 px-4"><span class="px-2 py-0.5 rounded text-xs font-semibold bg-slate-100 text-slate-700">${v.cmvr}</span></td>
+          <td class="py-3 px-4 text-slate-700">${v.payload}</td>
+          <td class="py-3 px-4 text-slate-700">${v.speed}</td>
+          <td class="py-3 px-4 text-slate-600 text-xs">${v.models}</td>
+          <td class="py-3 px-4 font-bold text-slate-900">${v.price}</td>
+          <td class="py-3 px-4 font-semibold text-teal-700">${v.run}</td>
+        </tr>`).join('');
+    }
+    renderVehicles('ALL');
+    document.getElementById('catFilter').addEventListener('change', e => renderVehicles(e.target.value));
+
+    // TCO Slider Logic
+    const kmSlider = document.getElementById('kmSlider');
+    kmSlider.addEventListener('input', () => {
+      const km = parseInt(kmSlider.value, 10);
+      document.getElementById('kmValue').textContent = km + ' km/d';
+      const moKm = km * 26;
+      const fmt = n => '₹' + Math.round(n).toLocaleString('en-IN');
+      document.getElementById('ice2w').textContent = fmt(moKm * 1.85) + '/mo';
+      document.getElementById('ev2w').textContent = fmt(moKm * 0.35) + '/mo';
+      document.getElementById('save2w').textContent = fmt(moKm * 1.50);
+
+      document.getElementById('ice3w').textContent = fmt(moKm * 3.00) + '/mo';
+      document.getElementById('ev3w').textContent = fmt(moKm * 0.85) + '/mo';
+      document.getElementById('save3w').textContent = fmt(moKm * 2.15);
+
+      document.getElementById('icescv').textContent = fmt(moKm * 4.65) + '/mo';
+      document.getElementById('evscv').textContent = fmt(moKm * 1.12) + '/mo';
+      document.getElementById('savescv').textContent = fmt(moKm * 3.53);
+    });
+
+    // 4. OEM Table & Search
+    const oems = [
+      { name: 'Bajaj Auto Ltd.', seg: '3W (CNG, EV, Dsl) + e-2W', dom: '4,73,247 (3W)', exp: '~3,65,000', rev: '~₹11,450 Cr (3W/CV)', note: '#1 in 3W (34.7% share); RE, Maxima C/Z, GoGo EV (89.6k e-3W)' },
+      { name: 'Tata Motors Ltd.', seg: 'Sub-2T SCV & e-SCV', dom: '~1,78,000 (SCV)', exp: '~14,500', rev: '~₹9,800 Cr (SCV est.)', note: '#1 in Mini-Trucks (52% share); Ace Gold, Ace Pro, Ace EV 1000' },
+      { name: 'Mahindra & Mahindra / MLMML', seg: '3W (EV/ICE) & Sub-2T SCV', dom: '1,10,036 (3W) + 78.5k SCV', exp: '~1,800', rev: '₹4,798 Cr (MLMML) + ₹4.4k Cr', note: '#1 in Electric 3W (1,01,873 e-3W sold); Treo Zor, Jeeto, Zeo' },
+      { name: 'Piaggio Vehicles Pvt. Ltd.', seg: '3W (Diesel, CNG, EV)', dom: '90,892 (3W)', exp: '~28,500', rev: '~₹3,920 Cr (PVPL)', note: '#3 in 3W; Ape Xtra LDX, Ape E-Xtra FX Max, E-City Ultra' },
+      { name: 'Maruti Suzuki India', seg: 'Sub-2T SCV (Petrol & CNG)', dom: '~82,000 (Super Carry)', exp: '~2,400', rev: '~₹4,650 Cr (SCV est.)', note: '#2 in Mini-Trucks (24% share); Super Carry 1.2L Petrol & S-CNG' },
+      { name: 'TVS Motor Company', seg: '3W (CNG/EV) & B2B 2W', dom: '55,488 (3W) + 65k XL100', exp: '~1,95,000', rev: '~₹3,400 Cr (3W/B2B)', note: 'Fastest-growing L5 OEM (+114% YoY); King EV Max, King Kargo' },
+      { name: 'Atul Auto Ltd.', seg: '3W (Diesel, CNG, L3/L5 EV)', dom: '32,422 (3W)', exp: '~6,027', rev: '₹824 Cr (Consolidated)', note: 'Top-5 3W OEM (38,449 total); Gem, Rik, Energie2, Mobili' },
+      { name: 'YC Electric Vehicle', seg: 'L3 E-Rickshaw & E-Cart', dom: '36,807 (L3)', exp: 'Negligible', rev: '~₹460 Cr (Est.)', note: 'Largest organized L3 e-rickshaw/e-cart OEM (Yatri Super, E-Loader)' },
+      { name: 'Euler Motors Pvt. Ltd.', seg: 'L5 Cargo EV & e-SCV', dom: '~8,200 (EV)', exp: 'Negligible', rev: '₹402–433 Cr (+110% YoY)', note: 'Pure-play commercial EV leader; HiLoad EV & Storm EV 4W' },
+      { name: 'Yulu Bikes / Zypp Electric', seg: 'FaaS / B2B e-2W Leasing', dom: '~65,000 active fleet', exp: '—', rev: '₹281 Cr (Yulu) / ~₹420 Cr (Zypp)', note: 'Dominant quick-commerce FaaS operators (Zepto, Blinkit, Zomato)' }
+    ];
+
+    function renderOems(q) {
+      const term = q.toLowerCase();
+      document.getElementById('oemTableBody').innerHTML = oems
+        .filter(o => o.name.toLowerCase().includes(term) || o.note.toLowerCase().includes(term) || o.seg.toLowerCase().includes(term))
+        .map(o => `<tr class="hover:bg-slate-50">
+          <td class="py-3 px-4 font-bold text-slate-900">${o.name}</td>
+          <td class="py-3 px-4 text-slate-700 text-xs">${o.seg}</td>
+          <td class="py-3 px-4 font-semibold text-slate-900">${o.dom}</td>
+          <td class="py-3 px-4 text-slate-600">${o.exp}</td>
+          <td class="py-3 px-4 font-bold text-teal-700">${o.rev}</td>
+          <td class="py-3 px-4 text-xs text-slate-600">${o.note}</td>
+        </tr>`).join('');
+    }
+    renderOems('');
+    document.getElementById('oemSearch').addEventListener('input', e => renderOems(e.target.value));
+
+    // 5. 2035 Forecast Chart with Toggle
+    const years = ['FY26 (Base)', 'FY28 (Proj.)', 'FY30 (Proj.)', 'FY32 (Proj.)', 'FY35 (Proj.)'];
+    const volDatasets = [
+      { label: 'Regulated 3W', data: [1363412, 1575000, 1830000, 2110000, 2560000], backgroundColor: '#0D9488' },
+      { label: 'Sub-2T SCV Mini-Trucks', data: [342000, 388000, 442000, 502000, 605000], backgroundColor: '#0284C7' },
+      { label: 'Regulated Commercial 2W', data: [140000, 215000, 310000, 425000, 575000], backgroundColor: '#6366F1' },
+      { label: 'Unregulated / Exempt', data: [555000, 510000, 465000, 435000, 425000], backgroundColor: '#F59E0B' }
+    ];
+    const evDatasets = [
+      { label: 'Electric 3W + e-SCV + e-2W (Regulated EV)', data: [958390, 1326810, 1795800, 2333460, 3094100], backgroundColor: '#0D9488' },
+      { label: 'CNG / Diesel / Petrol (Regulated ICE)', data: [887022, 851190, 786200, 703540, 645900], backgroundColor: '#64748B' }
+    ];
+
+    const forecastChart = new Chart(document.getElementById('forecastChart'), {
+      type: 'bar',
+      data: { labels: years, datasets: volDatasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: { x: { stacked: true }, y: { stacked: true, ticks: { callback: v => (v/1000000).toFixed(1) + 'M' } } },
+        plugins: { legend: { position: 'bottom' } }
+      }
+    });
+
+    document.getElementById('btnVol').addEventListener('click', () => {
+      forecastChart.data.datasets = volDatasets;
+      forecastChart.update();
+      document.getElementById('btnVol').className = 'px-3 py-1.5 rounded-md bg-slate-900 text-white';
+      document.getElementById('btnEv').className = 'px-3 py-1.5 rounded-md text-slate-700 hover:bg-slate-100';
+    });
+    document.getElementById('btnEv').addEventListener('click', () => {
+      forecastChart.data.datasets = evDatasets;
+      forecastChart.update();
+      document.getElementById('btnEv').className = 'px-3 py-1.5 rounded-md bg-slate-900 text-white';
+      document.getElementById('btnVol').className = 'px-3 py-1.5 rounded-md text-slate-700 hover:bg-slate-100';
+    });
+
+    // 6. State-Wise Demand Chart & Inspector
+    const stateData = [
+      { rank: 1, name: 'Uttar Pradesh', share: 18.5, vol: '3,41,400', mix: 'L3 E-Rickshaws/Carts (51%), L5 EV, CNG SCV', cat: 'Highest 3W & e-rickshaw base in India (33.9% of national L5 EV passenger sales); Lucknow, Kanpur, Varanasi, Noida hubs.' },
+      { rank: 2, name: 'Maharashtra', share: 14.2, vol: '2,62,050', mix: 'CNG/Diesel SCVs, L5 Cargo EV, B2B e-2W', cat: 'Mumbai–Pune–Nagpur warehousing corridors; highest e-2W registrations; strong CGD network.' },
+      { rank: 3, name: 'Karnataka', share: 11.8, vol: '2,17,760', mix: 'Commercial e-2Ws, L5 Cargo EV, Mini-Trucks', cat: 'Bengaluru quick-commerce epicenter (Zepto, Blinkit, Swiggy Instamart); 13.4% share of national L5N cargo EVs.' },
+      { rank: 4, name: 'Delhi NCR', share: 10.5, vol: '1,93,770', mix: 'L5 Cargo EV, CNG SCVs, FaaS e-2Ws', cat: 'CAQM bans on older diesel CVs; 60.8% EV penetration in L5N goods carriers; dense dark-store networks.' },
+      { rank: 5, name: 'Tamil Nadu', share: 9.4, vol: '1,73,470', mix: 'Diesel/CNG SCVs, L5 Cargo EV, B2B e-2Ws', cat: 'Chennai–Coimbatore–Hosur industrial & auto-component supply chains; strong state EV subsidies.' },
+      { rank: 6, name: 'Bihar', share: 7.8, vol: '1,43,940', mix: 'L3 E-Rickshaws/Carts, L5 EV, Diesel SCVs', cat: 'Rapid Tier-2/3 urban formalization; Urja Ganga CNG pipeline expansion.' },
+      { rank: 7, name: 'Gujarat', share: 6.9, vol: '1,27,330', mix: 'CNG SCVs (48% West CNG share), L5 3Ws', cat: 'India’s densest CGD gas network; Ahmedabad–Surat textile, chemical, and port feeder logistics.' },
+      { rank: 8, name: 'West Bengal', share: 6.2, vol: '1,14,420', mix: 'L3 E-Carts, CNG 3Ws, Mini-Trucks', cat: 'Kolkata metropolitan parcel distribution and dense semi-urban e-rickshaw replacement demand.' },
+      { rank: 9, name: 'Telangana', share: 5.4, vol: '99,650', mix: 'L5 Cargo EV, CNG SCVs, B2B e-2Ws', cat: 'Hyderabad pharma, e-commerce, and quick-commerce logistics hubs; 100% road tax exemption for EVs.' },
+      { rank: 10, name: 'Rajasthan', share: 4.8, vol: '88,580', mix: 'Diesel/CNG SCVs, L3/L5 3Ws', cat: 'Jaipur–Jodhpur–Udaipur FMCG, handicrafts, and agri-mandi last-mile distribution.' },
+      { rank: 11, name: 'Rest of India', share: 14.5, vol: '2,67,580', mix: 'Mixed (Assam/Tripura L5 EV; MP/Punjab SCVs)', cat: 'High growth in Madhya Pradesh (+36% YoY EV growth), Assam (64.5% L5 EV share), and Punjab.' }
+    ];
+
+    new Chart(document.getElementById('stateChart'), {
+      type: 'bar',
+      data: {
+        labels: stateData.map(s => s.name),
+        datasets: [{
+          label: 'Share of National Demand (%)',
+          data: stateData.map(s => s.share),
+          backgroundColor: stateData.map(s => s.share >= 10 ? '#0F172A' : (s.share >= 5 ? '#0D9488' : '#F59E0B')),
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        onClick: (_, elements) => {
+          if (elements.length > 0) {
+            const s = stateData[elements[0].index];
+            document.getElementById('stName').textContent = `${s.name} (${s.rank <= 10 ? '#' + s.rank : 'Aggregate'})`;
+            document.getElementById('stShare').textContent = s.share + '%';
+            document.getElementById('stVol').textContent = s.vol;
+            document.getElementById('stMix').textContent = s.mix;
+            document.getElementById('stCatalyst').textContent = s.cat;
+          }
+        },
+        plugins: { legend: { display: false } },
+        scales: { x: { ticks: { callback: v => v + '%' } } }
+      }
+    });
+  </script>
+</body>
+</html>
